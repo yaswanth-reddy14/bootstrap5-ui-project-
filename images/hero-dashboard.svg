@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" width="560" height="420" role="img" aria-label="Product dashboard illustration">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef0ff"/>
+      <stop offset="1" stop-color="#f8f9ff"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4f46e5"/>
+      <stop offset="1" stop-color="#7c73ff"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="560" height="420" rx="24" fill="url(#bg)"/>
+
+  <!-- main card -->
+  <rect x="40" y="48" width="480" height="300" rx="18" fill="#ffffff" stroke="#e7e9f6"/>
+
+  <!-- top bar -->
+  <circle cx="66" cy="76" r="5" fill="#f16a6a"/>
+  <circle cx="84" cy="76" r="5" fill="#f7c04a"/>
+  <circle cx="102" cy="76" r="5" fill="#59c689"/>
+  <rect x="360" y="68" width="140" height="16" rx="8" fill="#eef0f8"/>
+
+  <!-- sidebar -->
+  <rect x="60" y="104" width="90" height="222" rx="12" fill="#f4f5fc"/>
+  <rect x="74" y="124" width="62" height="10" rx="5" fill="#d7dbf3"/>
+  <rect x="74" y="148" width="62" height="10" rx="5" fill="#e2e5f5"/>
+  <rect x="74" y="172" width="62" height="10" rx="5" fill="#e2e5f5"/>
+  <rect x="74" y="196" width="62" height="10" rx="5" fill="#e2e5f5"/>
+
+  <!-- stat tiles -->
+  <rect x="168" y="104" width="160" height="70" rx="12" fill="#eef0ff"/>
+  <rect x="184" y="120" width="70" height="10" rx="5" fill="#b9bef1"/>
+  <rect x="184" y="140" width="46" height="18" rx="6" fill="#4f46e5"/>
+
+  <rect x="340" y="104" width="160" height="70" rx="12" fill="#e8f8ef"/>
+  <rect x="356" y="120" width="70" height="10" rx="5" fill="#a9dcbf"/>
+  <rect x="356" y="140" width="46" height="18" rx="6" fill="#59c689"/>
+
+  <!-- chart -->
+  <rect x="168" y="190" width="332" height="136" rx="12" fill="#fafbff" stroke="#eef0f8"/>
+  <polyline points="188,300 236,270 284,286 332,240 380,258 428,210 476,228"
+    fill="none" stroke="url(#accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#4f46e5">
+    <circle cx="236" cy="270" r="4"/>
+    <circle cx="332" cy="240" r="4"/>
+    <circle cx="428" cy="210" r="4"/>
+  </g>
+  <rect x="188" y="312" width="288" height="6" rx="3" fill="#eef0f8"/>
+
+  <!-- floating badge -->
+  <g>
+    <rect x="404" y="300" width="120" height="60" rx="14" fill="url(#accent)"/>
+    <text x="464" y="326" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#ffffff">+38%</text>
+    <text x="464" y="346" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#e3e1ff">this month</text>
+  </g>
+</svg>

@@ -1,0 +1,585 @@
+/* =========================================================
+   Nexora — Custom Stylesheet
+   ---------------------------------------------------------
+   Table of contents:
+     1. General / Base
+     2. Typography & Helpers
+     3. Navbar
+     4. Buttons
+     5. Hero
+     6. Section headings
+     7. Cards (features, services, testimonials, team)
+     8. Stats
+     9. Timeline
+    10. Skills / Progress
+    11. FAQ Accordion
+    12. Contact page
+    13. CTA Banner
+    14. Footer
+    15. Responsive tweaks
+   ========================================================= */
+
+
+/* ============ 1. GENERAL / BASE ============ */
+:root {
+  --nx-primary: #4f46e5;
+  --nx-primary-dark: #4338ca;
+  --nx-dark: #1e2235;
+  --nx-body: #565b73;
+  --nx-bg-soft: #f6f7fb;
+  --nx-radius: 1rem;
+  --nx-shadow: 0 10px 30px rgba(30, 34, 53, 0.06);
+  --nx-shadow-hover: 0 18px 40px rgba(79, 70, 229, 0.14);
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--nx-body);
+  background-color: #ffffff;
+}
+
+/* A slightly tinted background used to alternate sections */
+.bg-light-subtle {
+  background-color: var(--nx-bg-soft) !important;
+}
+
+/* Extra vertical padding utility (Bootstrap only goes up to py-5) */
+.py-6 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.pt-6 { padding-top: 5rem; }
+.pb-6 { padding-bottom: 5rem; }
+
+
+/* ============ 2. TYPOGRAPHY & HELPERS ============ */
+h1, h2, h3, h4, h5, h6,
+.navbar-brand {
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  color: var(--nx-dark);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--nx-primary), #7c73ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.letter-spaced {
+  letter-spacing: 0.12em;
+}
+
+.text-white-75 {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Soft shadow used on most cards */
+.shadow-soft {
+  box-shadow: var(--nx-shadow);
+}
+
+/* Soft background tints for icon badges */
+.bg-soft-primary { background-color: rgba(79, 70, 229, 0.10); }
+.bg-soft-success { background-color: rgba(25, 135, 84, 0.10); }
+.bg-soft-warning { background-color: rgba(255, 193, 7, 0.14); }
+.bg-soft-info    { background-color: rgba(13, 202, 240, 0.12); }
+.bg-soft-danger  { background-color: rgba(220, 53, 69, 0.10); }
+
+/* Small eyebrow label above section titles */
+.eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--nx-primary);
+}
+
+
+/* ============ 3. NAVBAR ============ */
+.site-navbar {
+  box-shadow: 0 1px 0 rgba(30, 34, 53, 0.06);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.navbar-brand {
+  font-size: 1.35rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Little hexagon logo mark */
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--nx-primary), #7c73ff);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.site-navbar .nav-link {
+  font-weight: 500;
+  color: var(--nx-dark);
+  padding: 0.5rem 0.9rem;
+  border-radius: 0.5rem;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.site-navbar .nav-link:hover,
+.site-navbar .nav-link.active {
+  color: var(--nx-primary);
+  background-color: rgba(79, 70, 229, 0.06);
+}
+
+
+/* ============ 4. BUTTONS ============ */
+.btn {
+  font-weight: 600;
+  border-radius: 0.65rem;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--nx-primary);
+  border-color: var(--nx-primary);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--nx-primary-dark);
+  border-color: var(--nx-primary-dark);
+}
+
+/* CTA buttons lift slightly on hover for a friendly feel */
+.btn-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--nx-shadow-hover);
+}
+
+.btn-outline-secondary {
+  border-color: #d7d9e3;
+  color: var(--nx-dark);
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--nx-dark);
+  border-color: var(--nx-dark);
+}
+
+
+/* ============ 5. HERO ============ */
+.hero {
+  padding: 5rem 0;
+  background: linear-gradient(180deg, #f4f4ff 0%, #ffffff 100%);
+}
+
+.hero-badge {
+  background-color: rgba(79, 70, 229, 0.10);
+  color: var(--nx-primary);
+  font-weight: 600;
+  padding: 0.5rem 0.9rem;
+}
+
+.hero-title {
+  line-height: 1.15;
+}
+
+.hero-image-wrap {
+  position: relative;
+  padding: 1rem;
+}
+
+.hero-image {
+  border-radius: var(--nx-radius);
+  filter: drop-shadow(0 20px 40px rgba(79, 70, 229, 0.18));
+}
+
+.hero-meta i {
+  font-size: 1rem;
+}
+
+/* Logo strip below the hero */
+.logo-strip .logo-item {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #9aa0b5;
+}
+
+
+/* ============ 6. SECTION HEADINGS ============ */
+.section-heading {
+  max-width: 640px;
+  margin-bottom: 1rem;
+}
+
+.section-heading h2 {
+  font-size: 2rem;
+}
+
+
+/* ============ 7. CARDS ============ */
+/* Shared hover lift for the various card types */
+.feature-card,
+.service-card,
+.testimonial-card,
+.team-card,
+.why-card,
+.mission-card {
+  border-radius: var(--nx-radius);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover,
+.service-card:hover,
+.testimonial-card:hover,
+.team-card:hover,
+.why-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--nx-shadow-hover);
+}
+
+/* Rounded icon badge used in feature/mission cards */
+.feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  font-size: 1.5rem;
+}
+
+/* Bigger plain icon for service cards */
+.service-icon {
+  font-size: 2rem;
+}
+
+.link-arrow {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--nx-primary);
+}
+
+.link-arrow i {
+  transition: transform 0.2s ease;
+}
+
+.link-arrow:hover i {
+  transform: translateX(4px);
+}
+
+/* Testimonials */
+.testimonial-text {
+  color: var(--nx-body);
+  font-size: 0.98rem;
+}
+
+.testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.testimonials-section {
+  background-color: var(--nx-bg-soft);
+}
+
+/* Team */
+.team-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: var(--nx-shadow);
+}
+
+
+/* ============ 8. STATS ============ */
+.stats-section {
+  background: linear-gradient(135deg, var(--nx-primary), #6d63ff);
+  color: #fff;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+}
+
+
+/* ============ 9. TIMELINE ============ */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+}
+
+/* The vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--nx-primary), #cbd0f5);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -1.63rem;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--nx-primary);
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.timeline-year {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--nx-primary);
+  background-color: rgba(79, 70, 229, 0.10);
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+}
+
+
+/* ============ 10. SKILLS / PROGRESS ============ */
+.progress {
+  height: 8px;
+  border-radius: 999px;
+  background-color: #eceef6;
+}
+
+.progress-bar {
+  background-color: var(--nx-primary);
+  border-radius: 999px;
+}
+
+
+/* ============ 11. FAQ ACCORDION ============ */
+.faq-accordion .accordion-item {
+  border: 1px solid #eceef4;
+  border-radius: 0.75rem !important;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+
+.faq-accordion .accordion-button {
+  font-weight: 600;
+  color: var(--nx-dark);
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+  background-color: rgba(79, 70, 229, 0.06);
+  color: var(--nx-primary);
+  box-shadow: none;
+}
+
+.faq-accordion .accordion-button:focus {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+
+/* ============ 12. CONTACT PAGE ============ */
+.page-header {
+  padding: 4rem 0 2rem;
+  background: linear-gradient(180deg, #f4f4ff 0%, #ffffff 100%);
+}
+
+.page-header-lead {
+  max-width: 620px;
+}
+
+.form-control,
+.form-select {
+  border-radius: 0.6rem;
+  border-color: #e2e4ee;
+  padding: 0.65rem 0.9rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--nx-primary);
+  box-shadow: 0 0 0 0.2rem rgba(79, 70, 229, 0.12);
+}
+
+.contact-info-card {
+  border-radius: var(--nx-radius);
+  transition: transform 0.2s ease;
+}
+
+.contact-info-card:hover {
+  transform: translateY(-3px);
+}
+
+.map-placeholder {
+  min-height: 320px;
+  background:
+    repeating-linear-gradient(45deg, #f0f1f8, #f0f1f8 12px, #f6f7fb 12px, #f6f7fb 24px);
+  border: 1px dashed #cfd3e6;
+}
+
+
+/* ============ 13. CTA BANNER ============ */
+.cta-banner {
+  background: linear-gradient(135deg, var(--nx-primary), #7c73ff);
+  border-radius: 1.5rem;
+  padding: 3rem;
+  box-shadow: var(--nx-shadow-hover);
+}
+
+
+/* ============ 14. FOOTER ============ */
+.site-footer {
+  background-color: var(--nx-dark);
+  color: #b9bdd0;
+}
+
+.site-footer .navbar-brand {
+  font-size: 1.35rem;
+}
+
+.footer-text {
+  color: #9ea3bd;
+  font-size: 0.95rem;
+}
+
+.footer-heading {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a,
+.footer-legal a {
+  color: #9ea3bd;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-legal a:hover {
+  color: #fff;
+}
+
+.footer-divider {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Round social buttons used in footer, team & contact */
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.social-link:hover {
+  background-color: var(--nx-primary);
+  transform: translateY(-3px);
+}
+
+/* Smaller variant + light background for the team & contact cards */
+.social-sm {
+  width: 34px;
+  height: 34px;
+  background-color: rgba(79, 70, 229, 0.10);
+  color: var(--nx-primary);
+}
+
+.social-sm:hover {
+  background-color: var(--nx-primary);
+  color: #fff;
+}
+
+/* Social links sitting on a light contact card should be tinted, not white */
+.contact-info-card .social-link {
+  background-color: rgba(79, 70, 229, 0.10);
+  color: var(--nx-primary);
+}
+
+.contact-info-card .social-link:hover {
+  background-color: var(--nx-primary);
+  color: #fff;
+}
+
+
+/* ============ 15. RESPONSIVE TWEAKS ============ */
+@media (max-width: 991.98px) {
+  .hero {
+    padding: 3rem 0;
+    text-align: center;
+  }
+
+  .hero .d-flex {
+    justify-content: center;
+  }
+
+  .hero-meta {
+    justify-content: center;
+  }
+
+  .cta-banner {
+    padding: 2.5rem 1.75rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .py-6 {
+    padding-top: 3.25rem;
+    padding-bottom: 3.25rem;
+  }
+
+  .section-heading h2 {
+    font-size: 1.6rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .display-4 {
+    font-size: 2.25rem;
+  }
+}

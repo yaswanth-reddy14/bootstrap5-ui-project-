@@ -97,20 +97,6 @@ I also became more confident in organizing HTML and CSS files and building clean
 
 ---
 
-## Time Taken
-
-Approximate time spent on the project:
-
-- Understanding the requirements – 1 hour
-- Exploring Bootstrap documentation – 2 hours
-- Developing the Home page – 3 hours
-- Developing the About and Contact pages – 3 hours
-- Styling, testing, deployment, and documentation – 2 hours
-
-**Total Time:** Approximately 11 hours
-
----
-
 ## Conclusion
 
 This project gave me practical experience with Bootstrap 5 and responsive web development. It helped me understand how different Bootstrap components can be combined to create a complete website instead of using them individually. I also became more comfortable using Git, GitHub, and GitHub Pages for managing and deploying a project. Overall, this assignment improved both my Bootstrap knowledge and my confidence in building responsive user interfaces.

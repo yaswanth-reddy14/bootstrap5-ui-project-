@@ -25,14 +25,6 @@ During this project, I used ChatGPT and Claude as learning assistants to underst
 
 Some of the challenges included maintaining a consistent design across all pages, making the layout responsive on different devices, and customizing Bootstrap components without losing responsiveness. I solved these challenges by referring to the Bootstrap documentation and testing the website at different screen sizes.
 
-## Time Taken
-
-- Requirement analysis – 1 hour
-- Bootstrap exploration – 2 hours
-- Development – 6 hours
-- Testing, deployment, and documentation – 2 hours
-
-**Total Time:** Approximately 11 hours.
 
 ## Conclusion
 
